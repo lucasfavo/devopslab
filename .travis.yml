@@ -16,7 +16,10 @@ script:
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
+  strategy: git
   edge: true 
   app: devopslab-lucasfavo
   on:
       branch: master
+  os: linux
+      dist: xenial
